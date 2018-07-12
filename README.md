@@ -1,2 +1,2 @@
-# Sistema-CR2M
-Sistema para controlar o maquinário do DMM do curso de Engenharia Mecânica do IFMA
+# Projeto-CM-DMM-IFMA-APSII
+Sistema para controlar a rotina das manutenções preventivas nos maquinários de um Departamento de Mecânica criado para obtenção da nota final da disciplina de Análise e Projeto de Sistemas II do Instituto Federal de Educação, Ciência e Tecnologia do Maranhão (IFMA). O projeto do sistema é baseado na demanda de controle de manutenções preventivas do maquinário existente no depto. de metalurgia e materiais do IFMA. 
