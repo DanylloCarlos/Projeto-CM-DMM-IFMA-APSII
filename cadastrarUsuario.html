@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css"
+          href="css/style.css" />
+
+    <title>Área de cadastro</title>
+
+</head>
+<body>
+<div class="logo">
+    <img src="imgs\ifma_logo.jpg" width="160" height="180">
+    <img src="imgs\em_logo.jpg" width="130" height="130" align="right">
+</div>
+
+<div class="central_title">
+    <h1>Área de cadastro de usuário</h1>
+
+    <br><br>
+    <p id="nomeUser">Nome completo:</p>
+    <br><br>
+    <p id="enderecoUser">Endereço:</p>
+    <br><br>
+    <p id="dataNascUser">Data de nascimento:</p>
+    <br><br>
+    <p id="tipoUser">tipo de usuário:</p>
+    <br><br>
+    <p id="emailUser">E-mail:</p>
+    <br><br>
+    <p id="senhaUser">Senha:</p>
+    <br><br><br>
+    Voltar para a tela inicial: <a href="/Projeto-CM-DMM-IFMA-APSII/Code/index.html">Inicio</a>
+</div>
+
+    <?php
+    try{
+        $usuario = "root";
+        $senha = "";
+        $nomeUser = "<script>document.getElementById('nomeUser').innerHTML </script>";
+        $enderecoUser = "<script>document.getElementById('enderecoUser').innerHTML </script>";
+        $dataNascUser = "<script>document.getElementById('dataNascUser').innerHTML </script>"; 
+        $tipoUser = "<script>document.getElementById('tipoUser').innerHTML </script>";
+        $emailUser = "<script>document.getElementById('emailUser').innerHTML </script>";
+        $senhaUser = "<script>document.getElementById('emailUser').innerHTML </script>";
+
+        $pdo = new PDO('mysql:host=localhost; dbname=bd_evento', $usuario, $senha);
+        $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $stmt = $pdo->prepare('INSERT INTO cliente(nome, endereco, dtNasc, tipoUser, email, senha) 
+                VALUES($nomeUser, $enderecoUser, $dataNascUser, $tipoUser, $emailUser, $senhaUser'));
+        $stmt -> execute();
+
+        echo $stmt->rowCount();
+
+    }catch(PDOException $e){
+        echo 'Error: ' . $e->getMessage();
+    }
+    ?>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/verificaCampos.js"></script>
+
+    <title>tela de Login</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="imgs/ifma_logo.jpg" width="160" height="180">
+        <img src="imgs/em_logo.jpg" width="130" height="130" align="right">
+    </div>
+
+    <div class="central_title">
+    <h1>Sistema de controle de manutenções preventivas do DMM - IFMA</h1>
+    </div>
+
+    <div class="central_title">
+    <b class="custom_words"> Usuário:</b> &nbsp;
+        <input type="text" id="login" name="txtLogin" text-align="upside" size="25" class="custom_rectangles">
+    &nbsp;
+    <br><br>
+     <b class="custom_words">Senha:</b> &nbsp;
+        <input type="password" id="senha" name="txtSenha" size="25" class="custom_rectangles">
+    </div>
+
+    <div class="central_title">
+    <br>
+        <button onclick="verifica();">Fazer Login</button>
+
+    <br><br>
+        <!--Ainda não possui cadastro? <br><br>
+        <a href="/Projeto-CM-DMM-IFMA-APSII/Code/cadastrarUsuario.html">Clique aqui</a> para cadastrar um novo usuário!
+    -->
+    </div>
+
+</body>
+</html>
